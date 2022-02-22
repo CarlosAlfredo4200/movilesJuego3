@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(67, 68, 68);
+    color: white;
+}
+
+.tablero{
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 400px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+     
+}
+
+.a{
+
+    border: 1px solid black;
+    border-radius: 50px;
+    margin: 2px;
+
+}
