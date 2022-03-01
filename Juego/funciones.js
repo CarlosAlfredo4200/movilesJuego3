@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //tablero html
     let tablero = document.querySelector('.tablero');
 
-    //funcion para colocar las imagenes en el html
+    //funcion para colocar las imagenes en el html a
 
     const crearTablero = () => {
 
