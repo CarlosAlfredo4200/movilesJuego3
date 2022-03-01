@@ -1,1 +1,5 @@
-Algo mas
+Crear elemento               = document.createElement('element');
+Escribir texto en el element = element.textContent = "rexto"
+Escribir HTML en un Elemento = element.innerHTML = codigo HTML;
+Añadir un elemento al DOM    = parent.appendChild(element);
+Fregmentos de codigo         = document.createDocumentFragment()
