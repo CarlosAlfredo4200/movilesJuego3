@@ -67,19 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
          const opcion1Id = imgElegidaId[0];
          const opcion2Id = imgElegidaId[1];
 
-        if(opcion1Id === opcion2Id){
-            console.log('igual');
-        }
-        else{
-            console.log('diferente');
-        }
-
          
 
          if(imgElegida[0] === imgElegida[1] && opcion1Id != opcion2Id ){
              alert('Correcto');
              imagen[opcion1Id].setAttribute('src', './imagenes/bien.png');
              imagen[opcion2Id].setAttribute('src', './imagenes/bien.png');
+             imagen[opcion1Id].removeEventListener('click',descubrirImagen)
+             imagen[opcion2Id].removeEventListener('click',descubrirImagen)
              intentosCorrectos.push(imgElegida);
 
          }else{
@@ -98,33 +93,23 @@ document.addEventListener('DOMContentLoaded', () => {
          numeroIntentoGanado.textContent=intentosCorrectos.length;
 
          if(intentosCorrectos.length === imagenes.length/2){
-                numeroIntentoGanado.textContent = 'Ganaste!!!'
+                
+               alert('Lo lograste !!!')
+                location.reload()
                 
 
          }
 
      }
 
-     const reinicio = document.querySelector('button');
-     reinicio.textContent= "Reinicar el juego"
- 
-     reinicio.addEventListener('click', reiniciar);
- 
-     function reiniciar () {
-          
-         console.log('Riniciar');
-         numeroIntentoGanado.textContent = 0;
-         
-       
-     }
- 
+   
     //Ejecutar 
     crearTablero();
 
 
     //crear div
      
-
+     
 
    
 })
